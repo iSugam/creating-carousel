@@ -18,13 +18,15 @@ body {
     position: relative;
 }
 
-.carousel-container {
+.carousel-container, 
+.carousel-container2 {
     width: fit-content;
     margin: auto;
     position: relative;
 }
 
-.carousel-container button {
+.carousel-container button,
+.carousel-container2 button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -35,8 +37,6 @@ body {
     cursor: pointer;
     border: none;
     background-color: rgb(49, 42, 37);
-    color: #fff;
-    font-size: 20px;
 }
 
 .carousel-container button:first-child {
@@ -47,6 +47,20 @@ body {
     left: auto;
     right: 0;
     transform: translate(50%, -50%);
+}
+
+.carousel-container2 .buttons {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: calc(60px + 1rem);
+}
+
+.carousel-container2 .prevBtn, 
+.carousel-container2 .nextBtn {
+    position: relative;
+    transform: translate(0, 0);
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .carousel-item-container,
@@ -67,10 +81,6 @@ body {
 
 .carousel-item-container2  {
     width: 100vw;
-}
-
-.prevBtn, .nextBtn {
-    transform: translate(0, 0);
 }
 
 .carousel-item-container .item img,
