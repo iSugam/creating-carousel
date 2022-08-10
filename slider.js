@@ -3,6 +3,11 @@ const carousel = ({
     nextButton, 
     prevButton, 
     sliderItems,
+    itemsToShow = {
+        largeDevice: 1,
+        mediumDevece: "",
+        smallDevice: ""
+    },
     transition = 0,
     delay = 0, 
 }) => {
@@ -12,6 +17,21 @@ const carousel = ({
 
     // Get the items from document to slide
     const sliderItem = document.querySelectorAll(sliderItems);
+
+    window.addEventListener("resize", () => {
+        for(let i = 0; i < sliderItem.length; i++) {
+            const item = sliderItem[i]
+            if(window.innerWidth > 980) {
+                item.style.flex = `0 0 calc(100% / ${itemsToShow.largeDevice})`
+            }
+    
+            else if(window.innerWidth > 756) {
+                item.style.flex = `0 0 calc(100% / ${itemsToShow.mediumDevece})`
+            }
+            else item.style.flex = `0 0 calc(100% / ${itemsToShow.smallDevice})`
+        }
+    
+    });
 
     let slideItem;
     // Get the next Button
