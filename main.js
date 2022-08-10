@@ -2,7 +2,7 @@
 carousel({
     nextButton: ".next", // Next button class name
     prevButton: ".prev", // Previous Button Class Name
-    SliderItems: ".item", // class name of Carousel items
+    sliderItems: ".item", // class name of Carousel items
     transition: 300, // For CSS transition
     delay: 0 // Default is 0
 })
@@ -12,7 +12,7 @@ carousel({
 carousel({
     nextButton: ".nextBtn", // Next button class name
     prevButton: ".prevBtn", // Previous Button Class Name
-    SliderItems: ".item2", // class name of Carousel items
+    sliderItems: ".item2", // class name of Carousel items
     transition: 600, // For CSS transition
     delay: 0 // Default is 0
 })
