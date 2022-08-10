@@ -1,5 +1,5 @@
 # Making my own carousel
-## Note - I am still making it to be more efficient
+## Note - I am still working on it to make it more efficient.
 Trying to create my own carousel library for my future uses 
 
 ### Codes for using
