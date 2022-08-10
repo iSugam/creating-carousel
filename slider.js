@@ -33,7 +33,6 @@ const carousel = ({
                     with each click it will decreace in negative fron 0 to -9)
                     then set it to 0 which willbe the first item of the newItem
                 */
-               console.log(currentSlide);
 
                 if(currentSlide < -(newItem.length - 1)) {
                     currentSlide = 0; // Set it to 0 if it's less than the length of newItem in negative (-9 is less than -8) 
