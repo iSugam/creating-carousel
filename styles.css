@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(218, 102, 0);
+    color: #fff;
+    font-size: 20px;
+}
+
+.container,
+.container2 {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.carousel-container,
+.carousel-container2 {
+    display: flex;
+    width: 600px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-container .item,
+.carousel-container2 .item2 {
+    width: 600px;
+    height: 300px;
+    transition: 200ms;
+}
+
+
+.carousel-container2 .item2 {
+    width: 200px;
+    height: 200px;
+    transition:transform 100ms;
+}
+
+.carousel-container .item img,
+.carousel-container2 .item2 img {
+    object-fit: cover;
+    width: 600px;
+}
+
+.carousel-container2 .item2 img {
+    object-fit: cover;
+    width: 200px;
+    height: 100%;
+    padding: 1rem;
+}
