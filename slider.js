@@ -18,20 +18,18 @@ const carousel = ({
     // Get the items from document to slide
     const sliderItem = document.querySelectorAll(sliderItems);
 
-    window.addEventListener("resize", () => {
         for(let i = 0; i < sliderItem.length; i++) {
-            const item = sliderItem[i]
-            if(window.innerWidth > 980) {
+            let item = sliderItem[i]
+            if(innerWidth > 980) {
                 item.style.flex = `0 0 calc(100% / ${itemsToShow.largeDevice})`
             }
     
-            else if(window.innerWidth > 756) {
+            else if(innerWidth > 556) {
                 item.style.flex = `0 0 calc(100% / ${itemsToShow.mediumDevece})`
             }
-            else item.style.flex = `0 0 calc(100% / ${itemsToShow.smallDevice})`
+            else if (innerWidth > 456) item.style.flex = `0 0 calc(100% / ${itemsToShow.smallDevice})`
         }
     
-    });
 
     let slideItem;
     // Get the next Button
