@@ -9,5 +9,5 @@ carousel({
     nextButton: ".nextBtn",
     prevButton: ".prevBtn",
     SliderItems: ".item2",
-    transition: 300
+    transition: 1000
 })
