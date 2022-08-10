@@ -1,9 +1,15 @@
 let curSlide = 0
 
-const carousel = ({nextButton, prevButton, item, transition = 100, delay = 0, width}) => {
+const carousel = ({
+    nextButton, 
+    prevButton, 
+    SliderItems, 
+    transition = 0,
+    delay = 0, 
+}) => {
 
     // Get the items from document to slide
-    const newItem = document.querySelectorAll(item)
+    const newItem = document.querySelectorAll(SliderItems);
 
     let slideItem;
     // Get the next Button
@@ -16,8 +22,10 @@ const carousel = ({nextButton, prevButton, item, transition = 100, delay = 0, wi
                 slideItem = newItem[i]
     
                 // custon transition for sliders
-                slideItem.style.transition = transition + "ms"
-        
+                slideItem.style.cssText = `
+                    transition: ${transition}ms;
+                `       
+                console.log(slideItem.style);
                 if(curSlide < -(newItem.length - 1)) {
                     curSlide = 0
                     slideItem.style.transform = `translateX(${100 * (curSlide)}%)`;
