@@ -36,7 +36,7 @@ const carousel = ({
                console.log(currentSlide);
 
                 if(currentSlide < -(newItem.length - 1)) {
-                    currentSlide = 0
+                    currentSlide = 0; // Set it to 0 if it's less than the length of newItem in negative (-9 is less than -8) 
                     slideItem.style.transform = `translateX(${100 * (currentSlide)}%)`;
                 }
                 slideItem.style.transform = `translateX(${100 * (currentSlide)}%)`;
@@ -71,7 +71,7 @@ const carousel = ({
                     then set it to -9 which is the last item of newItem
                 */
                 if(currentSlide > 0) {
-                    currentSlide = -(newItem.length - 1)
+                    currentSlide = -(newItem.length - 1); // Set it to -9 if it's greater than 0
                     slideItem.style.transform = `translateX(${100 * currentSlide}%)`;
                 }
                 slideItem.style.transform = `translateX(${100 * (currentSlide)}%)`;
