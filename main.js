@@ -1,3 +1,4 @@
+// For FIRST carousel
 carousel({
     nextButton: ".next",
     prevButton: ".prev",
@@ -5,6 +6,8 @@ carousel({
     transition: 300,
 })
 
+
+// For SECOND Carousel
 carousel({
     nextButton: ".nextBtn",
     prevButton: ".prevBtn",
