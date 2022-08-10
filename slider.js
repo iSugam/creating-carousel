@@ -1,20 +1,21 @@
-// Deault currentNumber is 0
-let currentSlide = 0
-
 const carousel = ({
     nextButton, 
     prevButton, 
-    SliderItems,
+    sliderItems,
     transition = 0,
     delay = 0, 
 }) => {
 
+    // Deault currentNumber is 0
+    let currentSlide = 0
+
     // Get the items from document to slide
-    const newItem = document.querySelectorAll(SliderItems);
+    const newItem = document.querySelectorAll(sliderItems);
 
     let slideItem;
     // Get the next Button
     const nextBtn = document.querySelector(nextButton)
+
     nextBtn.addEventListener("click", () => {
         currentSlide--;
 
