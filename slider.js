@@ -3,7 +3,7 @@ let curSlide = 0
 const carousel = ({
     nextButton, 
     prevButton, 
-    SliderItems, 
+    SliderItems,
     transition = 0,
     delay = 0, 
 }) => {
@@ -22,9 +22,8 @@ const carousel = ({
                 slideItem = newItem[i]
     
                 // custon transition for sliders
-                slideItem.style.cssText = `
-                    transition: ${transition}ms;
-                `       
+                slideItem.style.transition = transition + "ms";
+                      
                 console.log(slideItem.style);
                 if(curSlide < -(newItem.length - 1)) {
                     curSlide = 0
