@@ -1,3 +1,4 @@
+// Creating the carousel function
 const carousel = ({
     nextButton, 
     prevButton, 
