@@ -1,15 +1,13 @@
 carousel({
     nextButton: ".next",
     prevButton: ".prev",
-    item: ".item",
-    style: {
-        transition: 200
-    }
+    SliderItems: ".item",
+    transition: 300,
 })
 
 carousel({
     nextButton: ".nextBtn",
     prevButton: ".prevBtn",
-    item: ".item2",
+    SliderItems: ".item2",
     transition: 300
 })
