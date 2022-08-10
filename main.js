@@ -13,6 +13,6 @@ carousel({
     nextButton: ".nextBtn", // Next button class name
     prevButton: ".prevBtn", // Previous Button Class Name
     SliderItems: ".item2", // class name of Carousel items
-    transition: 1000, // For CSS transition
+    transition: 600, // For CSS transition
     delay: 0 // Default is 0
 })
