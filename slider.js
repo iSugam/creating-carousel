@@ -1,13 +1,9 @@
+
 // Creating the carousel function
 const carousel = ({
     nextButton, 
     prevButton, 
     sliderItems,
-    itemsToShow = {
-        largeDevice: 1,
-        mediumDevece: "",
-        smallDevice: ""
-    },
     transition = 0,
     delay = 0, 
 }) => {
@@ -17,19 +13,6 @@ const carousel = ({
 
     // Get the items from document to slide
     const sliderItem = document.querySelectorAll(sliderItems);
-
-        for(let i = 0; i < sliderItem.length; i++) {
-            let item = sliderItem[i]
-            if(innerWidth > 980) {
-                item.style.flex = `0 0 calc(100% / ${itemsToShow.largeDevice})`
-            }
-    
-            else if(innerWidth > 556) {
-                item.style.flex = `0 0 calc(100% / ${itemsToShow.mediumDevece})`
-            }
-            else if (innerWidth > 456) item.style.flex = `0 0 calc(100% / ${itemsToShow.smallDevice})`
-        }
-    
 
     let slideItem;
     // Get the next Button
