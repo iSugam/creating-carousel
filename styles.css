@@ -16,6 +16,7 @@ body {
     margin: auto;
     margin-top: 50px;
     position: relative;
+    z-index: 99;
 }
 
 .carousel-container, 
@@ -37,6 +38,7 @@ body {
     cursor: pointer;
     border: none;
     background-color: rgb(49, 42, 37);
+    z-index: 1;
 }
 
 .carousel-container button:first-child {
@@ -70,7 +72,6 @@ body {
     overflow: hidden;
     margin: auto;
     position: relative;
-    z-index: -1;
 }
 
 .carousel-item-container .item,
@@ -88,12 +89,12 @@ body {
     object-fit: cover;
     width: 600px;
     height: 100%;
+
 }
 
 .carousel-item-container2 .item2 {
     flex: 0 0 calc(100% / 5);
     height: 200px;
-    transition: transform 100ms;
     margin: auto;
 }
 
