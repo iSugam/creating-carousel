@@ -5,7 +5,9 @@ const carousel = ({
     prevButton, 
     sliderItems,
     transition = 0,
-    delay = 0, 
+    delay = 0,
+    autoSlide = true,
+    autoSlideDelay = 5
 }) => {
 
     // Deault currentNumber is 0
@@ -15,8 +17,6 @@ const carousel = ({
     const sliderItem = document.querySelectorAll(sliderItems);
 
     let slideItem;
-    // Get the next Button
-    const nextBtn = document.querySelector(nextButton)
 
     /* 
         Dividing the sliderItem width by its parent element width to check how many sliderItems are 
@@ -26,7 +26,8 @@ const carousel = ({
     */
     const setLength = Math.round(sliderItem[0].parentElement.offsetWidth / sliderItem[0].offsetWidth);
 
-    nextBtn.addEventListener("click", () => {
+    // Function for next sliderItem
+    const GET_NEXT = () => {
         currentSlide--;
 
         setTimeout(() => {
@@ -52,17 +53,10 @@ const carousel = ({
                 slideItem.style.transform = `translateX(${100 * (currentSlide)}%)`;
             }
         }, delay)
+    }
 
-    })
-
-    // Get the previous Button
-    const prevBtn = document.querySelector(prevButton)
-
-    /* 
-        Adding click event to the previous button
-        to change the carousel item to previous item 
-    */
-    prevBtn.addEventListener("click", () => {
+    // Function for next sliderItem
+    const GET_PREVIOUS = () => {
         currentSlide++;
 
         setTimeout(() => {
@@ -88,6 +82,19 @@ const carousel = ({
             }
         }, delay)
 
-    })
+    }
 
+    // Get the next Button
+    const nextBtn = document.querySelector(nextButton);
+    nextBtn.addEventListener("click", () => {
+        GET_NEXT();
+    });
+
+    // Get the previous Button
+    const prevBtn = document.querySelector(prevButton);
+    prevBtn.addEventListener("click", () => {
+        GET_PREVIOUS();
+    });
+
+    setInterval(GET_NEXT, autoSlideDelay * 1000)
 }
