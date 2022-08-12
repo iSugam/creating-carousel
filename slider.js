@@ -19,13 +19,6 @@ const carousel = ({
     let slideItem;
     let slideInterval;
 
-    // const first_CLONE = sliderItem[0].cloneNode(true)
-    // const last_CLONE = sliderItem[sliderItem.length - 1].cloneNode(true)
-    // first_CLONE.id = "first_CLONE"
-    // last_CLONE.id = "last_CLONE"
-    // sliderItem[0].parentElement.append(first_CLONE)
-    // sliderItem[0].parentElement.prepend(last_CLONE)
-
     /* 
         Dividing the sliderItem width by its parent element width to check how many sliderItems are 
         showing in one carousel and if it's greater than 1 then substract the number with sliderItem.length. 
@@ -102,6 +95,7 @@ const carousel = ({
     const startSlide = () =>  slideInterval = setInterval(GET_NEXT, autoSlideDelay * 1000)
 
     // Start auto slide only if true
+    if (autoSlide === false) return clearInterval(slideInterval)
     if(autoSlide === true) startSlide()
 
     // Mouse Enter Event
