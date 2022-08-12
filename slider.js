@@ -17,6 +17,15 @@ const carousel = ({
     const sliderItem = document.querySelectorAll(sliderItems);
 
     let slideItem;
+    let slideInterval;
+
+    // const first_CLONE = sliderItem[0].cloneNode(true)
+    // const last_CLONE = sliderItem[sliderItem.length - 1].cloneNode(true)
+    // first_CLONE.id = "first_CLONE"
+    // last_CLONE.id = "last_CLONE"
+    // sliderItem[0].parentElement.append(first_CLONE)
+    // sliderItem[0].parentElement.prepend(last_CLONE)
+    
 
     /* 
         Dividing the sliderItem width by its parent element width to check how many sliderItems are 
@@ -85,16 +94,30 @@ const carousel = ({
     }
 
     // Get the next Button
-    const nextBtn = document.querySelector(nextButton);
-    nextBtn.addEventListener("click", () => {
+    document.querySelector(nextButton).addEventListener("click", () => {
         GET_NEXT();
     });
 
     // Get the previous Button
-    const prevBtn = document.querySelector(prevButton);
-    prevBtn.addEventListener("click", () => {
+    document.querySelector(prevButton).addEventListener("click", () => {
         GET_PREVIOUS();
     });
 
-    setInterval(GET_NEXT, autoSlideDelay * 1000)
+    // For slideItem to slide or carousel to move automatically
+    const startSlide = () => {
+        slideInterval = setInterval(GET_NEXT, autoSlideDelay * 1000)
+    }
+
+    // Start auto slide only if true
+    if(autoSlide === true) {
+        startSlide()
+    }
+
+    // Mouse Enter Event
+    sliderItem[0].parentElement.addEventListener("mouseenter", () => {
+        clearInterval(slideInterval)
+    })
+
+    // Mouse Leave Event
+    sliderItem[0].parentElement.addEventListener("mouseleave", startSlide)
 }
