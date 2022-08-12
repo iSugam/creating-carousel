@@ -5,8 +5,8 @@ carousel({
     sliderItems: ".item", // class name of Carousel items
     transition: 300, // For CSS transition
     delay: 0, // Default is 0
-    autoSlide: true, // Still working on it
-    autoSlideDelay: 5 // Set delay on auto slide items
+    autoSlide: true, // For carousel to move aotomatically (Default is true)
+    autoSlideDelay: 2 // Set delay on auto slide items (in seconds)
 })
 
 
@@ -17,6 +17,5 @@ carousel({
     sliderItems: ".item2", // class name of Carousel items
     transition: 600, // For CSS transition
     delay: 0, // Default is 0
-    autoSlide: true, // Still working on it 
-    autoSlideDelay: 2 // Set delay on auto slide items
+    autoSlide: false // For carousel to move aotomatically (Default is true)
 })
