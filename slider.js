@@ -15,7 +15,7 @@ const carousel = ({
 
     // Get the items from document to slide
     const sliderItem = document.querySelectorAll(sliderItems);
-
+    const carouselContainer = sliderItem[0].parentElement
     let slideItem;
     let slideInterval;
 
@@ -25,7 +25,7 @@ const carousel = ({
         So, if the last sliderItem is already in view, then it will return to the first sliderItem.
         Compare the FIRST slider with SECOND Slider to actually get the result.
     */
-    const setLength = Math.round(sliderItem[0].parentElement.offsetWidth / sliderItem[0].offsetWidth);
+    const setLength = Math.round(carouselContainer.offsetWidth / sliderItem[0].offsetWidth);
 
     // Function for next sliderItem
     const GET_NEXT = () => {
@@ -98,8 +98,8 @@ const carousel = ({
     if(autoSlide === true) startSlide()
 
     // Mouse Enter Event
-    sliderItem[0].parentElement.addEventListener("mouseenter", () => clearInterval(slideInterval))
+    carouselContainer.addEventListener("mouseenter", () => clearInterval(slideInterval))
 
     // Mouse Leave Event
-    sliderItem[0].parentElement.addEventListener("mouseleave", startSlide)
+    carouselContainer.addEventListener("mouseleave", startSlide)
 }
