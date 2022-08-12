@@ -53,21 +53,11 @@ const carousel = ({
 
     }
 
-    document.querySelector(nextButton).addEventListener("click", () => {
-        GET_NEXT();
-    });
-    document.querySelector(prevButton).addEventListener("click", () => {
-        GET_PREVIOUS();
-    });
+    document.querySelector(nextButton).addEventListener("click",GET_NEXT)
+    document.querySelector(prevButton).addEventListener("click", GET_PREVIOUS)
 
-    const startSlide = () => {
-        slideInterval = setInterval(GET_NEXT, autoSlideDelay * 1000)
-    }
-    if(autoSlide === true) {
-        startSlide()
-    }
-    sliderItem[0].parentElement.addEventListener("mouseenter", () => {
-        clearInterval(slideInterval)
-    })
+    const startSlide = () => {slideInterval = setInterval(GET_NEXT, autoSlideDelay * 1000)}
+    if(autoSlide === true) {startSlide()}
+    sliderItem[0].parentElement.addEventListener("mouseenter", () => {clearInterval(slideInterval)})
     sliderItem[0].parentElement.addEventListener("mouseleave", startSlide)
 }
