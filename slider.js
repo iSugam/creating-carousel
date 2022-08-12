@@ -25,7 +25,6 @@ const carousel = ({
     // last_CLONE.id = "last_CLONE"
     // sliderItem[0].parentElement.append(first_CLONE)
     // sliderItem[0].parentElement.prepend(last_CLONE)
-    
 
     /* 
         Dividing the sliderItem width by its parent element width to check how many sliderItems are 
