@@ -16,5 +16,22 @@ carousel({
 })
 ```
 
+#### Use .stretch class for hover effects on carousel images
+```html
+<div class="carousel-item-container stretch"> <!-- 👈 Use Stretch class here -->
+        <div class="item">
+          <img src="./images/1.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="./images/2.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="./images/3.jpg" alt="">
+        </div>
+</div>
+```
+
 Visit the link below 👇 to check (Not completed yet)
 - Check it Live: [Live Site](https://isugam.github.io/creating-carousel/)
