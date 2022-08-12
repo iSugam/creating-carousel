@@ -82,7 +82,6 @@ const carousel = ({
                 slideItem.style.transform = `translateX(${100 * (currentSlide)}%)`;
             }
         }, delay)
-
     }
 
     // Get the next Button
