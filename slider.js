@@ -93,29 +93,19 @@ const carousel = ({
     }
 
     // Get the next Button
-    document.querySelector(nextButton).addEventListener("click", () => {
-        GET_NEXT();
-    });
+    document.querySelector(nextButton).addEventListener("click", GET_NEXT);
 
     // Get the previous Button
-    document.querySelector(prevButton).addEventListener("click", () => {
-        GET_PREVIOUS();
-    });
+    document.querySelector(prevButton).addEventListener("click", GET_PREVIOUS);
 
     // For slideItem to slide or carousel to move automatically
-    const startSlide = () => {
-        slideInterval = setInterval(GET_NEXT, autoSlideDelay * 1000)
-    }
+    const startSlide = () =>  slideInterval = setInterval(GET_NEXT, autoSlideDelay * 1000)
 
     // Start auto slide only if true
-    if(autoSlide === true) {
-        startSlide()
-    }
+    if(autoSlide === true) startSlide()
 
     // Mouse Enter Event
-    sliderItem[0].parentElement.addEventListener("mouseenter", () => {
-        clearInterval(slideInterval)
-    })
+    sliderItem[0].parentElement.addEventListener("mouseenter", () => clearInterval(slideInterval))
 
     // Mouse Leave Event
     sliderItem[0].parentElement.addEventListener("mouseleave", startSlide)
