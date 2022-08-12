@@ -33,5 +33,8 @@ carousel({
 </div>
 ```
 
+#### Effect from stretch class
+![](./images/github/stretchOnHover-gif.gif)
+
 Visit the link below 👇 to check (Not completed yet)
 - Check it Live: [Live Site](https://isugam.github.io/creating-carousel/)
