@@ -96,6 +96,7 @@ body {
     flex: 0 0 calc(100% / 5);
     height: 200px;
     margin: auto;
+    overflow: hidden;
 }
 
 .carousel-item-container2 .item2 img {
@@ -103,6 +104,15 @@ body {
     width: 100%;
     height: 100%;
     padding: 1rem;
+}
+
+/* STRETCH Class for hover effect (will be activate only if declared in carousel-item-container) */
+.stretch img {
+    transition: 200ms;
+}
+
+.stretch img:hover{
+    transform: scale(1.08);
 }
 
 @media (max-width: 756px) {
