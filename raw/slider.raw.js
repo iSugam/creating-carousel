@@ -41,7 +41,6 @@ const carousel = ({
             }
         }, delay)
     }
-
     document.querySelector(nextButton).addEventListener("click", GET_NEXT);
     document.querySelector(prevButton).addEventListener("click", GET_PREVIOUS);
     const startSlide = () =>  slideInterval = setInterval(GET_NEXT, autoSlideDelay * 1000)
